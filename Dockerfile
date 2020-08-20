@@ -9,7 +9,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # hadolint ignore=DL3009,SC2215
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-        curl=7.58.0-2ubuntu3.8 \
+        curl=7.58.0-2ubuntu3.10 \
         gnupg2=2.2.4-1ubuntu1.2 \
         ca-certificates=20180409
 
@@ -19,9 +19,9 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
 # hadolint ignore=DL3009,SC2215
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-        google-cloud-sdk=282.0.0-0 \
-        google-cloud-sdk-app-engine-python=282.0.0-0 \
-        google-cloud-sdk-app-engine-python-extras=282.0.0-0
+        google-cloud-sdk=306.0.0-0 \
+        google-cloud-sdk-app-engine-python=306.0.0-0 \
+        google-cloud-sdk-app-engine-python-extras=306.0.0-0
 
 RUN curl -L https://github.com/tektoncd/cli/releases/download/v${TEKTON_CLI_VERSION}/tkn_${TEKTON_CLI_VERSION}_Linux_x86_64.tar.gz | tar xvz -C /usr/local/bin
 
