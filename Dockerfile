@@ -1,5 +1,5 @@
 # syntax = docker/dockerfile:experimental
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 ARG TEKTON_CLI_VERSION
 ENV TEKTON_CLI_VERSION=${TEKTON_CLI_VERSION:-0.8.0}
